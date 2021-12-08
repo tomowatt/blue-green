@@ -1,4 +1,4 @@
-FROM golang:1.16-alpine as builder
+FROM golang:1.17-buster as builder
 
 WORKDIR /build
 COPY ./go.mod ./main.go ./
