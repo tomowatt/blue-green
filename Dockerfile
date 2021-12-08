@@ -1,8 +1,8 @@
 FROM golang:1.17-buster as builder
 
 WORKDIR /build
-COPY ./go.mod ./main.go ./
-RUN CGO_ENABLED=0 GOOS=linux go build -o blue-green .
+COPY . ./
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-X 'main.release=`git rev-parse --short=7 HEAD`'" -o blue-green .
 
 FROM scratch
 WORKDIR /app

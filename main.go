@@ -8,10 +8,13 @@ import (
 	"os"
 )
 
+var release string
+
 type BlueGreenData struct {
-	Title string
-	Text  string
-	Color string
+	Title   string
+	Text    string
+	Color   string
+	Release string
 }
 
 func InitData() *BlueGreenData {
@@ -35,9 +38,10 @@ func InitData() *BlueGreenData {
 	}
 
 	data := BlueGreenData{
-		Title: title,
-		Text:  text,
-		Color: color,
+		Title:   title,
+		Text:    text,
+		Color:   color,
+		Release: release,
 	}
 
 	return &data
