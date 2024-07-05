@@ -28,7 +28,7 @@ func InitData() *BlueGreenData {
 	}
 
 	if text == "" {
-		fmt.Println("\"PORT\" not set, defaulting to: \"blue\"")
+		fmt.Println("\"TEXT\" not set, defaulting to: \"blue\"")
 		text = "blue"
 	}
 
